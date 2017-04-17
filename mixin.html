@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="borde-superior"></div>
+		<div class="contenedor-nav">
+			<div class="logo"><img src="logo.svg"></div>
+			<nav>
+				<ul>	
+					<li>  <a href="partial.html">Partials</a></li>
+					<li> <a href="extend.html">@extend</a> </li>
+					<li> <a href="mixin.html">Mixin</a> </li>
+					<li> <a href="index.html">basico</a> </li>
+				</ul>			
+			</nav>
+		</div>
+		<div class="basic-sass">Sass Basic</div>
+	</header>
+	<main>
+		
+			<h3>mixin</h3>
+			<p> <h4>¿Para qué valen los Mixins? </h4>
+
+			Los Mixins te permiten reutilizar estilos (propiedades e incluso selectores) sin tener que copiarlos y pegarlos cada vez que quieres utilizarlos.</p>
+			<p>Por ejemplo, supongamos que tenemos un estilo básico para los botones de nuestra web pero tenemos luego dos colores diferentes según la ubicación del botón:</p>
+			<img src="mixin1.jpg">
+			<p>Como vemos, todo se repite salvo el color de fondo. Este es un ejemplo de repetición de código que probablemente queramos evitar en nuestra hoja .scss, y lo podemos hacer gracias a los Mixins (en el siguiente artículo veremos también otra opción para hacerlo, Extend, quizás incluso más recomendada para el caso que acabamos de ver)</p>
+			<h4>Como crear un mixin</h4>
+			<p>Para escribir un Mixin lo hacemos escribiendo @Mixin seguido por el nombre del mismo. Por ejemplo, para el caso anterior, escribiríamos en el Mixin las propiedades que repetíamos. Y luego en cada botón incluimos el Mixin con @include:</p>
+			<h4>Puntos a tener en cuenta</h4>
+			<ul>
+				<li>Como regla general está bien escribir primero el @include y luego poner las propiedades singulares (como background: black;) para poder sobreescribir alguna de las que nos trae el Mixin si fuera necesario.</li>
+				<li>Asegúrate que el @Mixin está declarado antes de usar los @include. Por ejemplo, puedes crear un parcial (partial) que se llame _mixins.scss y lo importamos antes del resto de parciales</li>
+				<li>@include no es lo mismo que @import. Con @include incluimos un mixin, mientras que con @import incluimos un archivo.</li>
+			</ul>
+			<p>El resultado en el css seria este.</p>
+			<img src="mixin4.jpg">
+			<p>Estaréis de acuerdo conmigo que el CSS generado no es muy bueno. Aunque en el archivo .scss no estábamos repitiendo código, en el archivo .css resultante sí lo estamos haciendo. Sería mucho mejor generar algo así:</p>
+			<img src="mixin5.jpg">
+			<p>Pero esto no lo podemos hacer con Mixins, sino con Extend,  Lo que acabamos de ver sin embargo nos sirve apara ver cómo funcionan los Mixins y para qué no son útiles.</p>
+			<h4>Cuándo usar los Mixins: Argumentos</h4>
+			<p>El poder real de los Mixins está en que podemos pasar argumentos a los mismos. Los argumentos se declaran como una lista de variables dentro de un paréntesis. A cada una de estas variables se le asigna un valor cada vez que se usa el mixin. De esta manera no generaremos código repetido cada vez que lo usemos, ya que gracias a los argumentos podemos obtener un código singular para cada caso.</p>
+			<p>Por ejemplo, un Mixin sencillo para border-radius:</p>
+			<p>Como vemos hemos creado un Mixin llamado rounded que tiene como argumento $radio, que es el radio que se aplicará en border-radius.</p>
+			<img src="mixin6.jpg">
+			
+	</main>
+	<footer> Desallorando por Moises Mannarino</footer>
+</body>
+</html>

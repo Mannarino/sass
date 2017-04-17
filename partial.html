@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="borde-superior"></div>
+		<div class="contenedor-nav">
+			<div class="logo"><img src="logo.svg"></div>
+			<nav>
+				<ul>	
+					
+					<li>  <a href="partial.html">Partials</a></li>
+					<li> <a href="extend.html">@extend</a> </li>
+					<li> <a href="mixin.html">Mixin</a> </li>
+					<li> <a href="index.html">basico</a> </li>
+				</ul>			
+			</nav>
+		</div>
+		<div class="basic-sass">Sass Basic</div>
+	</header>
+	<main>
+		
+			<h3>partials</h3>
+			<p>Si quieres importar un archivo SCSS o Sass pero no quieres que se compile como archivo CSS, utiliza un guión bajo como primer carácter del nombre del archivo. De esta manera, Sass no generará un archivo CSS para esa hoja de estilos, pero podrás utilizarla importándola dentro de otra hoja de estilos. Este tipo de archivos que no se compilan se denominan "hojas de estilos parciales" o simplemente "parciales" (en inglés, "partials").</p>
+			<p>Aunque el nombre del archivo tenga un guión bajo, no es necesario indicarlo en la regla @import. Así por ejemplo, si creas un archivo llamado _colors.scss, entonces no se generará un archivo _colors.css. Sin embargo, podrás utilizarlo en tus hojas de estilos con la regla @import "colors";, que importará el archivo _colors.scss.</p>
+			<p>Obviamente no puedes tener en un mismo directorio una hoja de estilos normal y una parcial con el mismo nombre. Siguiendo el ejemplo anterior, en el mismo directorio no puedes tener un archivo llamado _colors.scss y otro llamado colors.scss.</p>
+			
+	</main>
+	<footer> Desallorando por Moises Mannarino</footer>
+</body>
+</html>

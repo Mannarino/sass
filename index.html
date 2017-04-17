@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="borde-superior"></div>
+		<div class="contenedor-nav">
+			<div class="logo"><img src="logo.svg"></div>
+			<nav>
+				<ul>	
+					
+					<li>  <a href="partial.html">Partials</a></li>
+					<li> <a href="extend.html">@extend</a> </li>
+					<li> <a href="mixin.html">Mixin</a> </li>
+					<li> <a href="index.html">basico</a> </li>
+				</ul>			
+			</nav>
+		</div>
+		<div class="basic-sass">Sass Basic</div>
+	</header>
+	<main>
+		<h3>Crear archivo sass y que cree un css, o que vuelva a escuchar</h3>	
+		<p> A- vamos a la consola de ruby, busco el directorio donde voy a trabajar los archivos, con cd nombre de directorios como con git hasta llegar a la carpeta. 
+		<br> <br>
+		 b- Voy a mano a la carpeta donde trabajaremos y en este lugar creo un archivo .sass o .scss depende la sintaxis que queramos trabajar <br> <br>
+		 C- vollvemos a la consola de ruby y escribimos sass --watch estilos.sass:estilos.css 
+		 <br>
+		 Este comando ultimo del paso c, lo hacemos tanto para crear el primer archivo estilos css, como para hacer que vuelva a escuchar sass cada dia que lo volvemos a usar a los archivos.
+		 <br> <br> <hr>
+		
+		  </p>
+
+		   <h3> Que sublime reconosca sass</h3>
+
+		   <p> para que sublime text reconosca el codigo hay que añadirle una extension, para eso vamos a control + shift + p y abre el pakage y ahi, luego escribimos install pakage y se nos abre un instalador, ahi ponemos sass y buiscamso activar los que dicen set syntaix sass y syntax Highlighting for sass</p>
+
+		   <h3>Sintaxis de sass, ejemp</h3>
+		   <img src="ejempl-sintaxis.jpg">
+		   <p>Los elementos hijos van a la misma altura que las propiedades del padre. No se usan comas y llaves. 
+		   Se anida selector agregando una tabulacion o identacion por selector. es importante colocar un espacion entre los dos puntos y el alor que tendra la propiedad brackground: #333 . <br>	Los archivos con esta sintaxis son .sass . </p>
+
+
+		   <h3>hover y pesudoclases</h3>
+		   <p>En ocasiones es necesario modificar el comportamiento por defecto de los selectores anidados. Imagina que quieres aplicar estilos especiales en el estado hover del selector
+
+			En estos casos, puedes utilizar el carácter & para hacer referencia al selector padre dentro del cual se encuentra la regla anidada. Ejemplo:
+			
+			</p>
+			<img src="hover.jpg">
+
+			<h3> Comentarios en sass</h3>
+			<p> Primero se pueden hacer los mismos comentarios que en css /**/   <br>
+			Despues se pueden hacer los mismos comentarios especificos asi //  estos son para una sola, linea </p>
+
+			<h3> Variables</h3>
+			<p>$colo: #ccc <br> <br>
+			Las variables se crean con el signopesos,luego nombre de la variable, luego dos puntos  , luego espacio en blanco luego el valor de la variable.</p>
+	</main>
+	<footer> Desallorando por Moises Mannarino</footer>
+</body>
+</html>
